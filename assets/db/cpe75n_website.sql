@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 12, 2017 at 07:11 PM
+-- Generation Time: Oct 12, 2017 at 07:53 PM
 -- Server version: 10.1.25-MariaDB
--- PHP Version: 5.6.31
+-- PHP Version: 7.1.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,6 +25,20 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `headcoach`
+--
+
+CREATE TABLE `headcoach` (
+  `IDNumber` int(11) NOT NULL,
+  `FirstName` varchar(32) NOT NULL,
+  `LastName` varchar(32) NOT NULL,
+  `Username` varchar(32) NOT NULL,
+  `Password` varchar(32) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `sportstable`
 --
 
@@ -37,11 +51,26 @@ CREATE TABLE `sportstable` (
 --
 
 --
+-- Indexes for table `headcoach`
+--
+ALTER TABLE `headcoach`
+  ADD PRIMARY KEY (`IDNumber`);
+
+--
 -- Indexes for table `sportstable`
 --
 ALTER TABLE `sportstable`
   ADD PRIMARY KEY (`IDSports`);
-COMMIT;
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `headcoach`
+--
+ALTER TABLE `headcoach`
+  MODIFY `IDNumber` int(11) NOT NULL AUTO_INCREMENT;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
