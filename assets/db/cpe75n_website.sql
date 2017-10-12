@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 12, 2017 at 07:53 PM
+-- Generation Time: Oct 12, 2017 at 08:13 PM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -21,6 +21,21 @@ SET time_zone = "+00:00";
 --
 -- Database: `cpe75n_website`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `coach`
+--
+
+CREATE TABLE `coach` (
+  `IDNumber` int(32) NOT NULL,
+  `Sport` varchar(32) NOT NULL,
+  `FirstName` varchar(32) NOT NULL,
+  `LastName` varchar(32) NOT NULL,
+  `Username` varchar(32) NOT NULL,
+  `Password` varchar(32) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -51,6 +66,12 @@ CREATE TABLE `sportstable` (
 --
 
 --
+-- Indexes for table `coach`
+--
+ALTER TABLE `coach`
+  ADD PRIMARY KEY (`IDNumber`);
+
+--
 -- Indexes for table `headcoach`
 --
 ALTER TABLE `headcoach`
@@ -66,6 +87,11 @@ ALTER TABLE `sportstable`
 -- AUTO_INCREMENT for dumped tables
 --
 
+--
+-- AUTO_INCREMENT for table `coach`
+--
+ALTER TABLE `coach`
+  MODIFY `IDNumber` int(32) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `headcoach`
 --
