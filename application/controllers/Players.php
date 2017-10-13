@@ -23,16 +23,4 @@ class Players extends CI_Controller {
         $this->load->view('templates/footer');
     }
         
-    public function edit()
-    {
-        //coaches can add remarks
-    }
-
-    public function view()
-    {
-        //coaches can view profile
-    }
-
-    
-        
 }

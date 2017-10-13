@@ -38,6 +38,28 @@ class Users extends CI_Controller {
 
     }
         
+    public function delete()
+    {
+    
+    }
 
-        
+    public function view()
+    {
+    
+    }
+
+    public function delete()
+    {
+    
+    }    
+ 
+    public function print()
+    {
+    
+    }
+
+    public function approve()
+    {
+    
+    }       
 }

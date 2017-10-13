@@ -9,13 +9,6 @@ class Sports extends CI_Controller {
         $this->load->library(array('session', 'form_validation'));
     }
 
-    public function index()
-    {
-        $this->load->view('templates/header', $data);
-        $this->load->view('sports/index', $data);
-        $this->load->view('templates/footer');
-    }
-
     public function view()
     {
         $this->load->view('templates/header', $data);
@@ -23,9 +16,9 @@ class Sports extends CI_Controller {
         $this->load->view('templates/footer');
     }
         
-    public function edit()
+    public function print()
     {
-        //edit players assigned to team
+        //list of approved players per sport
     }
 
         
