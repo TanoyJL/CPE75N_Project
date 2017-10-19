@@ -42,7 +42,7 @@
 				$data['records'] = $query;
 			}
 
-		$data['title'] = 'Records';	
+		$data['title'] = 'Futsal Players Record';	
 			$this->load->view("templates/header",$data);
 			$this->load->view("players/rfutsal_view", $data);
 			$this->load->view("templates/footer");

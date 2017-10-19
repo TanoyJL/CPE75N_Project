@@ -42,7 +42,7 @@
 			if($query = $this->Football_model->get_records()) {
 				$data['records'] = $query;
 			}
-		$data['title'] = 'Records';	
+		$data['title'] = 'FootBall Players Record';	
 			$this->load->view("templates/header",$data);
 			$this->load->view("players/rfootball_view", $data);
 			$this->load->view("templates/footer");

@@ -44,6 +44,10 @@
 					$data['records'] = $query;
 			}
 
-			$this->load->view("players/rLawntennis_view", $data);
+			$data['title'] = 'Lawntennis Players Record';	
+			$this->load->view("templates/header",$data);
+			$this->load->view("players/rlawntennis_view", $data);
+			$this->load->view("templates/footer");
+			
 		}
 	}
