@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 19, 2017 at 07:54 PM
+-- Generation Time: Oct 20, 2017 at 12:55 AM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -29,9 +29,21 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `basketball` (
-  `IDSports` int(11) NOT NULL,
-  `Shooting Hand` int(11) NOT NULL,
-  `Player Position` int(11) NOT NULL
+  `id` int(11) NOT NULL,
+  `first_name` text NOT NULL,
+  `last_name` text NOT NULL,
+  `id_num` int(11) NOT NULL,
+  `coure_year` text NOT NULL,
+  `gender` text NOT NULL,
+  `age` int(11) NOT NULL,
+  `birthdate` text NOT NULL,
+  `email` text NOT NULL,
+  `address` text NOT NULL,
+  `years_experience` int(11) NOT NULL,
+  `height` int(11) NOT NULL,
+  `weight` int(11) NOT NULL,
+  `shooting_hand` text NOT NULL,
+  `position` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -220,9 +232,39 @@ CREATE TABLE `swimming` (
   `weight` float DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `wvt`
+--
+
+CREATE TABLE `wvt` (
+  `id` int(11) NOT NULL,
+  `first_name` text NOT NULL,
+  `last_name` text NOT NULL,
+  `id_num` int(11) NOT NULL,
+  `coure_year` text NOT NULL,
+  `gender` text NOT NULL,
+  `age` int(11) NOT NULL,
+  `birthdate` text NOT NULL,
+  `email` text NOT NULL,
+  `address` text NOT NULL,
+  `years_experience` int(11) NOT NULL,
+  `height` int(11) NOT NULL,
+  `weight` int(11) NOT NULL,
+  `hittinghand` text NOT NULL,
+  `position` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `basketball`
+--
+ALTER TABLE `basketball`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `coach`
@@ -273,9 +315,20 @@ ALTER TABLE `swimming`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `wvt`
+--
+ALTER TABLE `wvt`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
+--
+-- AUTO_INCREMENT for table `basketball`
+--
+ALTER TABLE `basketball`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `coach`
 --
@@ -305,7 +358,12 @@ ALTER TABLE `headcoach`
 -- AUTO_INCREMENT for table `lawntennis`
 --
 ALTER TABLE `lawntennis`
-  MODIFY `id` int(45) NOT NULL AUTO_INCREMENT;COMMIT;
+  MODIFY `id` int(45) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `wvt`
+--
+ALTER TABLE `wvt`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
