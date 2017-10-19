@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 19, 2017 at 03:59 PM
+-- Generation Time: Oct 19, 2017 at 04:49 PM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -87,15 +87,16 @@ CREATE TABLE `football` (
   `rank_experience` longtext NOT NULL,
   `remarks` varchar(255) NOT NULL,
   `course_year` varchar(255) NOT NULL,
-  `created_at` date NOT NULL
+  `created_at` date NOT NULL,
+  `gender` int(128) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `football`
 --
 
-INSERT INTO `football` (`id`, `id_num`, `first_name`, `last_name`, `age`, `birthdate`, `phone_number`, `email`, `address`, `year_experience`, `height`, `weight`, `kickingfoot`, `player_position`, `player_experience`, `rank_experience`, `remarks`, `course_year`, `created_at`) VALUES
-(11, '', '', '', 0, '0000-00-00', '', '', '', 0, 0, 0, 'right', 'defense', '', '', '', '', '0000-00-00');
+INSERT INTO `football` (`id`, `id_num`, `first_name`, `last_name`, `age`, `birthdate`, `phone_number`, `email`, `address`, `year_experience`, `height`, `weight`, `kickingfoot`, `player_position`, `player_experience`, `rank_experience`, `remarks`, `course_year`, `created_at`, `gender`) VALUES
+(11, '', '', '', 0, '0000-00-00', '', '', '', 0, 0, 0, 'right', 'defense', '', '', '', '', '0000-00-00', 0);
 
 -- --------------------------------------------------------
 
@@ -106,15 +107,29 @@ INSERT INTO `football` (`id`, `id_num`, `first_name`, `last_name`, `age`, `birth
 CREATE TABLE `futsal` (
   `id` int(11) NOT NULL,
   `kickingfoot` varchar(255) NOT NULL,
-  `player_position` varchar(255) NOT NULL
+  `player_position` varchar(255) NOT NULL,
+  `first_name` varchar(45) NOT NULL,
+  `last_name` varchar(45) NOT NULL,
+  `id_num` int(45) NOT NULL,
+  `course_year` varchar(45) NOT NULL,
+  `gender` varchar(45) NOT NULL,
+  `age` int(45) NOT NULL,
+  `birthdate` varchar(45) NOT NULL,
+  `email` varchar(45) NOT NULL,
+  `address` varchar(45) NOT NULL,
+  `years_experience` varchar(45) NOT NULL,
+  `height` int(45) NOT NULL,
+  `weight` int(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `futsal`
 --
 
-INSERT INTO `futsal` (`id`, `kickingfoot`, `player_position`) VALUES
-(1, 'right', 'defense');
+INSERT INTO `futsal` (`id`, `kickingfoot`, `player_position`, `first_name`, `last_name`, `id_num`, `course_year`, `gender`, `age`, `birthdate`, `email`, `address`, `years_experience`, `height`, `weight`) VALUES
+(1, 'right', 'defense', '', '', 0, '', '', 0, '', '', '', '', 0, 0),
+(2, 'right', 'goal keeper', 'qwe', 'qwe', 123, 'bsshit', 'M', 12, '2012-09-09', 'rara@yahoo.com', 'qwe', '123', 123, 123),
+(3, 'right', 'goal keeper', 'qwe', 'qwe', 123, 'bsshit', 'M', 12, '2012-09-09', 'rara@yahoo.com', 'qwe', '123', 123, 123);
 
 -- --------------------------------------------------------
 
@@ -128,6 +143,30 @@ CREATE TABLE `headcoach` (
   `LastName` varchar(32) NOT NULL,
   `Username` varchar(32) NOT NULL,
   `Password` varchar(32) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `lawntennis`
+--
+
+CREATE TABLE `lawntennis` (
+  `hittinghand` varchar(45) NOT NULL,
+  `preffered_categories` varchar(45) NOT NULL,
+  `id` int(45) NOT NULL,
+  `first_name` varchar(45) NOT NULL,
+  `last_name` varchar(45) NOT NULL,
+  `id_num` int(45) NOT NULL,
+  `course_year` varchar(45) NOT NULL,
+  `gender` varchar(45) NOT NULL,
+  `age` int(45) NOT NULL,
+  `birthdate` varchar(45) NOT NULL,
+  `email` varchar(45) NOT NULL,
+  `address` varchar(45) NOT NULL,
+  `years_experience` int(45) NOT NULL,
+  `height` int(45) NOT NULL,
+  `weight` int(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -169,6 +208,12 @@ ALTER TABLE `headcoach`
   ADD PRIMARY KEY (`IDNumber`);
 
 --
+-- Indexes for table `lawntennis`
+--
+ALTER TABLE `lawntennis`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `sportstable`
 --
 ALTER TABLE `sportstable`
@@ -192,12 +237,17 @@ ALTER TABLE `football`
 -- AUTO_INCREMENT for table `futsal`
 --
 ALTER TABLE `futsal`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `headcoach`
 --
 ALTER TABLE `headcoach`
-  MODIFY `IDNumber` int(11) NOT NULL AUTO_INCREMENT;COMMIT;
+  MODIFY `IDNumber` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `lawntennis`
+--
+ALTER TABLE `lawntennis`
+  MODIFY `id` int(45) NOT NULL AUTO_INCREMENT;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
