@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 19, 2017 at 07:48 PM
+-- Generation Time: Oct 19, 2017 at 07:54 PM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -71,8 +71,8 @@ INSERT INTO `coachuser` (`id_coach`, `username`, `sport`, `password`) VALUES
 (3, 'footballcoach', 'football', 'footballcoach'),
 (5, 'lawntenniscoach', 'lawntennis', 'lawntenniscoach'),
 (7, 'basketballcoach', 'basketball', 'basketballcoach'),
-(8, 'womensvoleylballcoach', 'womensvolleyball', 'womensvoleyballcoach'),
-(9, 'mensvolleyballcoach', 'mensvolleyball', 'mensvolleyballcoach'),
+(8, 'womensvoleyballcoach', 'womensvoleyball', 'womensvoleyballcoach'),
+(9, 'mensvoleyballcoach', 'mensvoleyball', 'mensvoleyballcoach'),
 (10, 'badmintoncoach', 'badminton', 'badmintoncoach'),
 (11, 'tabletenniscoach', 'tabletennis', 'tabletenniscoach'),
 (12, 'chesscoach', 'chess', 'chesscoach'),

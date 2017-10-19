@@ -27,6 +27,46 @@ class User_model extends CI_Model{
 
 		     		 redirect('football/view');
 		     	}
+		     	if($data['sport'] == 'basketball'){
+
+		     		 redirect('/view');
+		     	}
+		     	if($data['sport'] == 'womensvoleyball'){
+
+		     		 redirect('/view');
+		     	}
+		     	if($data['sport'] == 'mensvoleyball'){
+
+		     		 redirect('/view');
+		     	}
+		     	if($data['sport'] == 'badminton'){
+
+		     		 redirect('/view');
+		     	}
+		     	if($data['sport'] == 'tabletennis'){
+
+		     		 redirect('/view');
+		     	}
+		     	if($data['sport'] == 'chess'){
+
+		     		 redirect('/view');
+		     	}
+		     	if($data['sport'] == 'taekwondo'){
+
+		     		 redirect('/view');
+		     	}
+		     	if($data['sport'] == 'karatedo'){
+
+		     		 redirect('/view');
+		     	}
+		     	if($data['sport'] == 'swimming'){
+
+		     		 redirect('/view');
+		     	}
+		     	if($data['sport'] == 'trackandfield'){
+
+		     		 redirect('/view');
+		     	}
 		     	else if($data['sport'] == 'lawntennis'){
 
 		     		 redirect('lawntennis/view');
