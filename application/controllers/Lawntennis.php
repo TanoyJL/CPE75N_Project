@@ -7,8 +7,13 @@
 			$this->load->model('Lawntennis_model');
 		}
 
-		function register(){
-			$this->load->view('players/Lawntennis_view');
+		function register() {
+		$data['title'] = 'Lawntennis Try Out Form';
+		$data['sport'] = 'Lawntennisl/create';	
+		$this->load->view("templates/header",$data);
+		$this->load->view("players/try-out",$data);
+		$this->load->view("players/Lawntennis_view");
+		$this->load->view("templates/footer");
 		}
 
 		function create(){

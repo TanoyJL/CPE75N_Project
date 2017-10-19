@@ -2,13 +2,18 @@
 
 	class Lawntennis_model extends CI_Model{
 
-		function get_records(){
+		public function __construct(){
+		  	
+                $this->load->database();
+        }
+
+        function get_records(){
 			$query = $this->db->get('lawntennis');
 			return $query->result();
 		}
 	
 		function add_records($data){
-			$this->db->insert('lawntennis',$data)
+			$this->db->insert('lawntennis',$data);
 			return;
 		}
 
