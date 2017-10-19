@@ -1,5 +1,5 @@
 
-	<?php echo form_open('football/create'); ?>
+	
 	
 			Kicking Foot: 
 			  <input type="radio" name="kickingfoot" value="right" checked> Right
