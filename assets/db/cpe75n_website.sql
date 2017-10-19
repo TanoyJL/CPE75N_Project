@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 19, 2017 at 04:49 PM
+-- Generation Time: Oct 19, 2017 at 05:01 PM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -78,7 +78,7 @@ CREATE TABLE `football` (
   `phone_number` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `address` varchar(255) NOT NULL,
-  `year_experience` int(255) NOT NULL,
+  `years_experience` int(255) NOT NULL,
   `height` int(255) NOT NULL,
   `weight` int(255) NOT NULL,
   `kickingfoot` varchar(255) NOT NULL,
@@ -95,7 +95,7 @@ CREATE TABLE `football` (
 -- Dumping data for table `football`
 --
 
-INSERT INTO `football` (`id`, `id_num`, `first_name`, `last_name`, `age`, `birthdate`, `phone_number`, `email`, `address`, `year_experience`, `height`, `weight`, `kickingfoot`, `player_position`, `player_experience`, `rank_experience`, `remarks`, `course_year`, `created_at`, `gender`) VALUES
+INSERT INTO `football` (`id`, `id_num`, `first_name`, `last_name`, `age`, `birthdate`, `phone_number`, `email`, `address`, `years_experience`, `height`, `weight`, `kickingfoot`, `player_position`, `player_experience`, `rank_experience`, `remarks`, `course_year`, `created_at`, `gender`) VALUES
 (11, '', '', '', 0, '0000-00-00', '', '', '', 0, 0, 0, 'right', 'defense', '', '', '', '', '0000-00-00', 0);
 
 -- --------------------------------------------------------
@@ -114,7 +114,7 @@ CREATE TABLE `futsal` (
   `course_year` varchar(45) NOT NULL,
   `gender` varchar(45) NOT NULL,
   `age` int(45) NOT NULL,
-  `birthdate` varchar(45) NOT NULL,
+  `birthdate` date NOT NULL,
   `email` varchar(45) NOT NULL,
   `address` varchar(45) NOT NULL,
   `years_experience` varchar(45) NOT NULL,
@@ -127,7 +127,7 @@ CREATE TABLE `futsal` (
 --
 
 INSERT INTO `futsal` (`id`, `kickingfoot`, `player_position`, `first_name`, `last_name`, `id_num`, `course_year`, `gender`, `age`, `birthdate`, `email`, `address`, `years_experience`, `height`, `weight`) VALUES
-(1, 'right', 'defense', '', '', 0, '', '', 0, '', '', '', '', 0, 0),
+(1, 'right', 'defense', '', '', 0, '', '', 0, '0000-00-00', '', '', '', 0, 0),
 (2, 'right', 'goal keeper', 'qwe', 'qwe', 123, 'bsshit', 'M', 12, '2012-09-09', 'rara@yahoo.com', 'qwe', '123', 123, 123),
 (3, 'right', 'goal keeper', 'qwe', 'qwe', 123, 'bsshit', 'M', 12, '2012-09-09', 'rara@yahoo.com', 'qwe', '123', 123, 123);
 
@@ -161,7 +161,7 @@ CREATE TABLE `lawntennis` (
   `course_year` varchar(45) NOT NULL,
   `gender` varchar(45) NOT NULL,
   `age` int(45) NOT NULL,
-  `birthdate` varchar(45) NOT NULL,
+  `birthdate` date NOT NULL,
   `email` varchar(45) NOT NULL,
   `address` varchar(45) NOT NULL,
   `years_experience` int(45) NOT NULL,
