@@ -12,7 +12,7 @@
 		$data['sport'] = 'Lawntennisl/create';	
 		$this->load->view("templates/header",$data);
 		$this->load->view("players/try-out",$data);
-		$this->load->view("players/Lawntennis_view");
+		$this->load->view("players/lawntennis_form");
 		$this->load->view("templates/footer");
 		}
 
@@ -46,7 +46,7 @@
 
 			$data['title'] = 'Lawntennis Players Record';	
 			$this->load->view("templates/header",$data);
-			$this->load->view("players/rlawntennis_view", $data);
+			$this->load->view("players/lawntennis_view", $data);
 			$this->load->view("templates/footer");
 			
 		}

@@ -7,23 +7,23 @@
                 $this->load->database();
         }
 
-  //       function get_records(){
-		// 	$query = $this->db->get('swimming');
-		// 	return $query->result();
-		// }
+        function get_records(){
+		$query = $this->db->get('swimming');
+		 	return $query->result();
+		 }
 	
-		// function add_records($data){
-		// 	$this->db->insert('swimming',$data);
-		// 	return;
-		// }
+		function add_records($data){
+			$this->db->insert('swimming',$data);
+			return;
+	 }
 
-		// function update_records($data){
-		// 	$this->db->where('id', 14);
-		// 	$this->db->update('swimming', $data);
-		// }
+		function update_records($data){
+			$this->db->where('id', 14);
+	 	$this->db->update('swimming', $data);
+	 }
 
-		// function delete_row(){
-		// 	$this->db->where('id', $this->url->segment(3));
-		// 	$this->db->delete('swimming');
-		// }
+	 function delete_row(){
+			$this->db->where('id', $this->url->segment(3));
+	 	$this->db->delete('swimming');
+		}
 	}

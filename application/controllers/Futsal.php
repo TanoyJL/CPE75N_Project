@@ -10,7 +10,7 @@
 		$data['sport'] = 'futsal/create';	
 		$this->load->view("templates/header",$data);
 		$this->load->view("players/try-out",$data);
-		$this->load->view("players/futsal_view");
+		$this->load->view("players/futsal_form");
 		$this->load->view("templates/footer");
 		}
 
@@ -44,7 +44,7 @@
 
 		$data['title'] = 'Futsal Players Record';	
 			$this->load->view("templates/header",$data);
-			$this->load->view("players/rfutsal_view", $data);
+			$this->load->view("players/futsal_view", $data);
 			$this->load->view("templates/footer");
 			
 		}

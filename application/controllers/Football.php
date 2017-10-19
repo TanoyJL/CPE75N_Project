@@ -10,7 +10,7 @@
 		$data['sport'] = 'football/create';	
 		$this->load->view("templates/header",$data);
 		$this->load->view("players/try-out",$data);
-		$this->load->view("players/football_view");
+		$this->load->view("players/football_form");
 		$this->load->view("templates/footer");
 		}
 
@@ -44,7 +44,7 @@
 			}
 		$data['title'] = 'FootBall Players Record';	
 			$this->load->view("templates/header",$data);
-			$this->load->view("players/rfootball_view", $data);
+			$this->load->view("players/football_view", $data);
 			$this->load->view("templates/footer");
 			
 		}

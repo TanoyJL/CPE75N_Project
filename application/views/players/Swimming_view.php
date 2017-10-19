@@ -23,7 +23,6 @@
 		    <th>Email</th>
 		    <th>Address</th>
 		    <th>Years of Experience</th>
-		    <th>Gender</th>
 		    <th>Height(in feet)</th>
 		    <th>Weight(in feet)</th>
 		  </tr>
@@ -40,7 +39,6 @@
 		    <td><?php echo $rows->email; ?></td>
 		    <td><?php echo $rows->address; ?></td>
 		    <td><?php echo $rows->years_experience; ?></td>
-		    <td><?php echo $rows->gender; ?></td>
 		    <td><?php echo $rows->height; ?></td>
 		    <td><?php echo $rows->weight; ?></td>
 		  </tr>
