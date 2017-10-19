@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 19, 2017 at 12:54 PM
+-- Generation Time: Oct 19, 2017 at 03:59 PM
 -- Server version: 10.1.25-MariaDB
--- PHP Version: 5.6.31
+-- PHP Version: 7.1.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -32,6 +32,21 @@ CREATE TABLE `basketball` (
   `IDSports` int(11) NOT NULL,
   `Shooting Hand` int(11) NOT NULL,
   `Player Position` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `coach`
+--
+
+CREATE TABLE `coach` (
+  `IDNumber` int(32) NOT NULL,
+  `Sport` varchar(32) NOT NULL,
+  `FirstName` varchar(32) NOT NULL,
+  `LastName` varchar(32) NOT NULL,
+  `Username` varchar(32) NOT NULL,
+  `Password` varchar(32) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -75,60 +90,54 @@ CREATE TABLE `football` (
   `created_at` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `football`
+--
+
+INSERT INTO `football` (`id`, `id_num`, `first_name`, `last_name`, `age`, `birthdate`, `phone_number`, `email`, `address`, `year_experience`, `height`, `weight`, `kickingfoot`, `player_position`, `player_experience`, `rank_experience`, `remarks`, `course_year`, `created_at`) VALUES
+(11, '', '', '', 0, '0000-00-00', '', '', '', 0, 0, 0, 'right', 'defense', '', '', '', '', '0000-00-00');
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `headcoachuser`
+-- Table structure for table `futsal`
 --
 
-CREATE TABLE `headcoachuser` (
-  `IDHeadCoach` int(11) NOT NULL,
-  `Username` int(11) NOT NULL,
-  `Email` int(11) NOT NULL,
-  `Password` int(11) NOT NULL,
-  `Position` int(11) NOT NULL
+CREATE TABLE `futsal` (
+  `id` int(11) NOT NULL,
+  `kickingfoot` varchar(255) NOT NULL,
+  `player_position` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- --------------------------------------------------------
-
 --
--- Table structure for table `playing experience`
+-- Dumping data for table `futsal`
 --
 
-CREATE TABLE `playing experience` (
-  `ID Playing Experience` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `taekwando`
---
-
-CREATE TABLE `taekwando` (
-  `IDSports` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+INSERT INTO `futsal` (`id`, `kickingfoot`, `player_position`) VALUES
+(1, 'right', 'defense');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tryoutform`
+-- Table structure for table `headcoach`
 --
 
-CREATE TABLE `tryoutform` (
-  `ID_TryoutForm` bigint(20) UNSIGNED NOT NULL,
-  `ID_Sports` int(13) NOT NULL,
+CREATE TABLE `headcoach` (
+  `IDNumber` int(11) NOT NULL,
   `FirstName` varchar(32) NOT NULL,
   `LastName` varchar(32) NOT NULL,
-  `IDNumber` int(32) NOT NULL,
-  `CourseAndYear` varchar(32) NOT NULL,
-  `Age` int(32) NOT NULL,
-  `PlayerDateOfBirth` varchar(32) NOT NULL,
-  `ContactPhoneNumber` int(32) NOT NULL,
-  `ContactEMail` varchar(32) NOT NULL,
-  `Address` varchar(255) NOT NULL,
-  `YearsOfPlayingExperience` int(32) NOT NULL,
-  `IDPlayingExperience` int(32) NOT NULL
+  `Username` varchar(32) NOT NULL,
+  `Password` varchar(32) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sportstable`
+--
+
+CREATE TABLE `sportstable` (
+  `IDSports` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -136,10 +145,10 @@ CREATE TABLE `tryoutform` (
 --
 
 --
--- Indexes for table `basketball`
+-- Indexes for table `coach`
 --
-ALTER TABLE `basketball`
-  ADD PRIMARY KEY (`IDSports`);
+ALTER TABLE `coach`
+  ADD PRIMARY KEY (`IDNumber`);
 
 --
 -- Indexes for table `football`
@@ -148,50 +157,47 @@ ALTER TABLE `football`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `playing experience`
+-- Indexes for table `futsal`
 --
-ALTER TABLE `playing experience`
-  ADD PRIMARY KEY (`ID Playing Experience`);
+ALTER TABLE `futsal`
+  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `taekwando`
+-- Indexes for table `headcoach`
 --
-ALTER TABLE `taekwando`
+ALTER TABLE `headcoach`
+  ADD PRIMARY KEY (`IDNumber`);
+
+--
+-- Indexes for table `sportstable`
+--
+ALTER TABLE `sportstable`
   ADD PRIMARY KEY (`IDSports`);
-
---
--- Indexes for table `tryoutform`
---
-ALTER TABLE `tryoutform`
-  ADD UNIQUE KEY `IDSports_2` (`ID_Sports`),
-  ADD UNIQUE KEY `IDPlayingExperience` (`IDPlayingExperience`),
-  ADD UNIQUE KEY `ID_TryoutForm` (`ID_TryoutForm`),
-  ADD KEY `IDSports` (`ID_Sports`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
+-- AUTO_INCREMENT for table `coach`
+--
+ALTER TABLE `coach`
+  MODIFY `IDNumber` int(32) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT for table `football`
 --
 ALTER TABLE `football`
-  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
--- AUTO_INCREMENT for table `tryoutform`
+-- AUTO_INCREMENT for table `futsal`
 --
-ALTER TABLE `tryoutform`
-  MODIFY `ID_TryoutForm` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+ALTER TABLE `futsal`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
--- Constraints for dumped tables
+-- AUTO_INCREMENT for table `headcoach`
 --
-
---
--- Constraints for table `tryoutform`
---
-ALTER TABLE `tryoutform`
-  ADD CONSTRAINT `tryoutform_ibfk_2` FOREIGN KEY (`IDPlayingExperience`) REFERENCES `playing experience` (`ID Playing Experience`);
-COMMIT;
+ALTER TABLE `headcoach`
+  MODIFY `IDNumber` int(11) NOT NULL AUTO_INCREMENT;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
