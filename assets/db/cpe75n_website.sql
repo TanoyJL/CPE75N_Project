@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.7.0
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 19, 2017 at 05:01 PM
+-- Generation Time: Oct 19, 2017 at 07:48 PM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -54,11 +56,30 @@ CREATE TABLE `coach` (
 --
 
 CREATE TABLE `coachuser` (
-  `IDCoach` int(11) NOT NULL,
-  `Username` int(11) NOT NULL,
-  `Sports` int(11) NOT NULL,
-  `Password` int(11) NOT NULL
+  `id_coach` int(11) NOT NULL,
+  `username` varchar(45) NOT NULL,
+  `sport` varchar(45) NOT NULL,
+  `password` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `coachuser`
+--
+
+INSERT INTO `coachuser` (`id_coach`, `username`, `sport`, `password`) VALUES
+(1, 'futsalcoach', 'futsal', 'futsalcoach'),
+(3, 'footballcoach', 'football', 'footballcoach'),
+(5, 'lawntenniscoach', 'lawntennis', 'lawntenniscoach'),
+(7, 'basketballcoach', 'basketball', 'basketballcoach'),
+(8, 'womensvoleylballcoach', 'womensvolleyball', 'womensvoleyballcoach'),
+(9, 'mensvolleyballcoach', 'mensvolleyball', 'mensvolleyballcoach'),
+(10, 'badmintoncoach', 'badminton', 'badmintoncoach'),
+(11, 'tabletenniscoach', 'tabletennis', 'tabletenniscoach'),
+(12, 'chesscoach', 'chess', 'chesscoach'),
+(13, 'taekwondocoach', 'taekwondo', 'taekwondocoach'),
+(14, 'karatedocoach', 'karatedo', 'karatedocoach'),
+(15, 'swimmingcoach', 'swimming', 'swimmingcoach'),
+(16, 'trackandfieldcoach', 'trackandfield', 'trackandfieldcoach');
 
 -- --------------------------------------------------------
 
@@ -210,6 +231,12 @@ ALTER TABLE `coach`
   ADD PRIMARY KEY (`IDNumber`);
 
 --
+-- Indexes for table `coachuser`
+--
+ALTER TABLE `coachuser`
+  ADD PRIMARY KEY (`id_coach`);
+
+--
 -- Indexes for table `football`
 --
 ALTER TABLE `football`
@@ -255,6 +282,11 @@ ALTER TABLE `swimming`
 ALTER TABLE `coach`
   MODIFY `IDNumber` int(32) NOT NULL AUTO_INCREMENT;
 --
+-- AUTO_INCREMENT for table `coachuser`
+--
+ALTER TABLE `coachuser`
+  MODIFY `id_coach` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+--
 -- AUTO_INCREMENT for table `football`
 --
 ALTER TABLE `football`
@@ -273,7 +305,8 @@ ALTER TABLE `headcoach`
 -- AUTO_INCREMENT for table `lawntennis`
 --
 ALTER TABLE `lawntennis`
-  MODIFY `id` int(45) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(45) NOT NULL AUTO_INCREMENT;COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
