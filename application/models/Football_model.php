@@ -2,6 +2,11 @@
 
 	class Football_model extends CI_Model {
 
+		  public function __construct(){
+		  	
+                $this->load->database();
+        }
+
 		function get_records() {
 			$query = $this->db->get('football');
 			return $query->result();
