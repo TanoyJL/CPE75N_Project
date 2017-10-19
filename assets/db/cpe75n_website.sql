@@ -1,6 +1,6 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
--- https://www.phpmyadmin.net/
+-- version 4.5.1
+-- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
 -- Generation Time: Oct 19, 2017 at 05:01 PM
@@ -8,8 +8,6 @@
 -- PHP Version: 7.1.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -179,6 +177,28 @@ CREATE TABLE `sportstable` (
   `IDSports` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `swimming`
+--
+
+CREATE TABLE `swimming` (
+  `id` int(11) NOT NULL,
+  `first_name` varchar(255) DEFAULT NULL,
+  `last_name` varchar(255) DEFAULT NULL,
+  `id_num` int(11) DEFAULT NULL,
+  `course_year` varchar(45) DEFAULT NULL,
+  `age` varchar(45) DEFAULT NULL,
+  `birthdate` varchar(45) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  `address` varchar(45) DEFAULT NULL,
+  `years_experience` int(11) DEFAULT NULL,
+  `gender` varchar(45) DEFAULT NULL,
+  `height` int(11) DEFAULT NULL,
+  `weight` float DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 --
 -- Indexes for dumped tables
 --
@@ -220,6 +240,12 @@ ALTER TABLE `sportstable`
   ADD PRIMARY KEY (`IDSports`);
 
 --
+-- Indexes for table `swimming`
+--
+ALTER TABLE `swimming`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -247,8 +273,7 @@ ALTER TABLE `headcoach`
 -- AUTO_INCREMENT for table `lawntennis`
 --
 ALTER TABLE `lawntennis`
-  MODIFY `id` int(45) NOT NULL AUTO_INCREMENT;COMMIT;
-
+  MODIFY `id` int(45) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
