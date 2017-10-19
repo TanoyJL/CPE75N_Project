@@ -29,7 +29,7 @@ class User_model extends CI_Model{
 		     	}
 		     	else if($data['sport'] == 'lawntennis'){
 
-		     		 redirect('football/view');
+		     		 redirect('lawntennis/view');
 		     	}
 		   }
 		   else
