@@ -36,7 +36,7 @@ class User_model extends CI_Model{
 		   {
 		   
 
-		     redirect('login_coach');
+		     redirect('users/login_coach');
 		   }
 		}
 

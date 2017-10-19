@@ -9,8 +9,9 @@ class Sports extends CI_Controller {
         $this->load->library(array('session', 'form_validation'));
     }
 
-    public function view()
-    {
+    public function index()
+    {   
+        $data['title'] = 'Sports';
         $this->load->view('templates/header', $data);
         $this->load->view('sports/view', $data);
         $this->load->view('templates/footer');
