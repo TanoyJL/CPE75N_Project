@@ -1,1 +1,1 @@
-try-out
+<?php echo form_open(''.$sport.''); ?>

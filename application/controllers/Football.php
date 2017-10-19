@@ -6,8 +6,10 @@
 		        $this->load->model('Football_model');
 		    }
 		function register() {
-		$data['title'] = 'Football Try Out Form';	
+		$data['title'] = 'Football Try Out Form';
+		$data['sport'] = 'football/create';	
 		$this->load->view("templates/header",$data);
+		$this->load->view("players/try-out",$data);
 		$this->load->view("players/football_view");
 		$this->load->view("templates/footer");
 		}
