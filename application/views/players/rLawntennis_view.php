@@ -13,6 +13,18 @@
 	</center>
 	<table>
 		  <tr>
+		  	<th>First Name</th>
+		    <th>Last Name</th>
+		    <th>ID Number</th>
+		    <th>Course and Year</th>
+		    <th>Gender</th>
+		    <th>Age</th>
+		    <th>Date of Birth</th>
+		    <th>Email</th>
+		    <th>Address</th>
+		    <th>Years of Experience</th>
+		    <th>Height(in feet)</th>
+		    <th>Weight(in feet)</th>
 		    <th>Hitting Hand</th>
 		    <th>Preffered Categories</th>
 		  </tr>
