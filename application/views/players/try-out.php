@@ -75,11 +75,9 @@
           </div>
       </div> 
 
-      <button>Submit</button>
      
  
   
     </div>
     
 
-<?php echo form_close(); ?>
