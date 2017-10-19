@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Football Try Out Form</title>
-</head>
-<body>
+
 	<?php echo form_open('football/create'); ?>
-	<h1>Try-Out Form</h1>
+	
 			Kicking Foot: 
 			  <input type="radio" name="kickingfoot" value="right" checked> Right
 			  <input type="radio" name="kickingfoot" value="left"> Left
@@ -21,6 +16,3 @@
 			<?php echo form_close(); ?>
 			<hr />
 
-			
-</body>
-</html>
