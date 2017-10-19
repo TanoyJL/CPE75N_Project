@@ -74,10 +74,12 @@
             <input type="number" class="form-control" placeholder="Enter weight" name="weight" required>
           </div>
       </div> 
+
+      <button>Submit</button>
      
  
   
     </div>
     
 
-			
+<?php echo form_close(); ?>
