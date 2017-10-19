@@ -2,7 +2,11 @@
 
 	class Futsal_model extends CI_Model {
 
-		function get_records() {
+		public function __construct(){
+		  	
+                $this->load->database();
+        }
+        function get_records() {
 			$query = $this->db->get('futsal');
 			return $query->result();
 		}

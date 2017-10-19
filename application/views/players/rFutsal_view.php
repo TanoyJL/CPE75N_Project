@@ -1,7 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
+
+
 	<style type="text/css">
 
 	table, th, td {
@@ -12,7 +10,7 @@
 </head>
 <body>
 	<center>
-	<h2>Records: </h2>
+
 	</center>
 	<table>
 		  <tr>
@@ -31,5 +29,3 @@
 			<?php endif; ?>
 	</table>
 
-</body>
-</html>

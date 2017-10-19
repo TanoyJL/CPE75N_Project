@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Futsal Try Out Form</title>
-</head>
-<body>
 
-	<?php echo form_open('futsal/create'); ?>
-	<h1>Futsal Try-Out Form</h1>
+	
 			Kicking Foot: 
 			  <input type="radio" name="kickingfoot" value="right" checked> Right
 			  <input type="radio" name="kickingfoot" value="left"> Left
@@ -23,5 +16,3 @@
 			<hr />
 
 			
-</body>
-</html>
