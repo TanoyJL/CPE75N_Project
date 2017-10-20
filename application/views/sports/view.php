@@ -4,7 +4,7 @@
 <a href="<?php echo base_url().'index.php/lawntennis/register' ?>">Lawn Tennis</a><br>
 <a href="<?php echo base_url().'index.php/basketball/register' ?>">Basketball</a><br>
 <a href="<?php echo base_url().'index.php/wvt/register' ?>">Womens voleyball</a><br>
-<a href="<?php echo base_url().'index.php/mensvoleyball/register' ?>">Mens voleyball</a><br>
+<a href="<?php echo base_url().'index.php/mvt/register' ?>">Mens voleyball</a><br>
 <a href="<?php echo base_url().'index.php/badminton/register' ?>">Badminton</a><br>
 <a href="<?php echo base_url().'index.php/tabletennis/register' ?>">Table Tennis</a><br>
 <a href="<?php echo base_url().'index.php/chess/register' ?>">Chess</a><br>

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 20, 2017 at 06:05 PM
--- Server version: 10.1.28-MariaDB
--- PHP Version: 7.1.10
+-- Generation Time: Oct 21, 2017 at 01:06 AM
+-- Server version: 10.1.25-MariaDB
+-- PHP Version: 7.1.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -21,6 +21,28 @@ SET time_zone = "+00:00";
 --
 -- Database: `cpe75n_website`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `badminton`
+--
+
+CREATE TABLE `badminton` (
+  `id` int(45) NOT NULL,
+  `first_name` varchar(45) NOT NULL,
+  `last_name` varchar(45) NOT NULL,
+  `id_num` int(45) NOT NULL,
+  `course_year` varchar(45) NOT NULL,
+  `gender` varchar(45) NOT NULL,
+  `age` int(45) NOT NULL,
+  `birthdate` date NOT NULL,
+  `email` varchar(45) NOT NULL,
+  `address` varchar(45) NOT NULL,
+  `years_experience` int(45) NOT NULL,
+  `height` int(45) NOT NULL,
+  `weight` int(45) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -44,6 +66,28 @@ CREATE TABLE `basketball` (
   `weight` int(11) NOT NULL,
   `shooting_hand` text NOT NULL,
   `position` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `chess`
+--
+
+CREATE TABLE `chess` (
+  `Id` int(45) NOT NULL,
+  `first_name` varchar(45) NOT NULL,
+  `last_name` varchar(45) NOT NULL,
+  `id_num` int(45) NOT NULL,
+  `course_year` varchar(45) NOT NULL,
+  `gender` varchar(45) NOT NULL,
+  `age` int(45) NOT NULL,
+  `birthdate` date NOT NULL,
+  `email` varchar(45) NOT NULL,
+  `address` varchar(45) NOT NULL,
+  `years_experience` varchar(45) NOT NULL,
+  `height` int(45) NOT NULL,
+  `weight` int(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -180,12 +224,56 @@ CREATE TABLE `headcoach` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `karatedo`
+--
+
+CREATE TABLE `karatedo` (
+  `id` int(45) NOT NULL,
+  `first_name` varchar(45) NOT NULL,
+  `last_name` varchar(45) NOT NULL,
+  `id_num` int(45) NOT NULL,
+  `course_year` int(45) NOT NULL,
+  `gender` varchar(45) NOT NULL,
+  `age` int(45) NOT NULL,
+  `birthdate` date NOT NULL,
+  `email` varchar(45) NOT NULL,
+  `address` varchar(45) NOT NULL,
+  `years_experience` int(45) NOT NULL,
+  `height` int(45) NOT NULL,
+  `weight` int(45) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `lawntennis`
 --
 
 CREATE TABLE `lawntennis` (
   `hittinghand` varchar(45) NOT NULL,
   `preffered_categories` varchar(45) NOT NULL,
+  `id` int(45) NOT NULL,
+  `first_name` varchar(45) NOT NULL,
+  `last_name` varchar(45) NOT NULL,
+  `id_num` int(45) NOT NULL,
+  `course_year` varchar(45) NOT NULL,
+  `gender` varchar(45) NOT NULL,
+  `age` int(45) NOT NULL,
+  `birthdate` date NOT NULL,
+  `email` varchar(45) NOT NULL,
+  `address` varchar(45) NOT NULL,
+  `years_experience` int(45) NOT NULL,
+  `height` int(45) NOT NULL,
+  `weight` int(45) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `mvt`
+--
+
+CREATE TABLE `mvt` (
   `id` int(45) NOT NULL,
   `first_name` varchar(45) NOT NULL,
   `last_name` varchar(45) NOT NULL,
@@ -218,7 +306,7 @@ CREATE TABLE `sportstable` (
 --
 
 CREATE TABLE `swimming` (
-  `id` int(11) NOT NULL,
+  `id` int(45) NOT NULL,
   `first_name` varchar(255) DEFAULT NULL,
   `last_name` varchar(255) DEFAULT NULL,
   `id_num` int(11) DEFAULT NULL,
@@ -231,6 +319,72 @@ CREATE TABLE `swimming` (
   `gender` varchar(45) DEFAULT NULL,
   `height` int(11) DEFAULT NULL,
   `weight` float DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tabletennis`
+--
+
+CREATE TABLE `tabletennis` (
+  `id` int(45) NOT NULL,
+  `first_name` varchar(45) NOT NULL,
+  `last_name` varchar(45) NOT NULL,
+  `id_num` int(45) NOT NULL,
+  `course_year` varchar(45) NOT NULL,
+  `gender` varchar(45) NOT NULL,
+  `age` int(45) NOT NULL,
+  `birthdate` date NOT NULL,
+  `email` varchar(45) NOT NULL,
+  `address` varchar(45) NOT NULL,
+  `years_experience` int(45) NOT NULL,
+  `height` int(45) NOT NULL,
+  `weight` int(45) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `taekwando`
+--
+
+CREATE TABLE `taekwando` (
+  `id` int(45) NOT NULL,
+  `first_name` varchar(45) NOT NULL,
+  `last_name` varchar(45) NOT NULL,
+  `id_num` int(45) NOT NULL,
+  `course_year` int(45) NOT NULL,
+  `gender` varchar(45) NOT NULL,
+  `age` int(45) NOT NULL,
+  `birthdate` date NOT NULL,
+  `email` varchar(45) NOT NULL,
+  `address` varchar(45) NOT NULL,
+  `years_experience` int(45) NOT NULL,
+  `height` int(45) NOT NULL,
+  `weight` int(45) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `trackandfield`
+--
+
+CREATE TABLE `trackandfield` (
+  `id` int(45) NOT NULL,
+  `first_name` varchar(455) NOT NULL,
+  `last_name` varchar(45) NOT NULL,
+  `id_num` int(45) NOT NULL,
+  `course_year` varchar(45) NOT NULL,
+  `gender` varchar(45) NOT NULL,
+  `age` int(45) NOT NULL,
+  `birthdate` date NOT NULL,
+  `email` varchar(45) NOT NULL,
+  `address` varchar(45) NOT NULL,
+  `years_experience` int(45) NOT NULL,
+  `height` int(45) NOT NULL,
+  `weight` int(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -262,10 +416,22 @@ CREATE TABLE `wvt` (
 --
 
 --
+-- Indexes for table `badminton`
+--
+ALTER TABLE `badminton`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `basketball`
 --
 ALTER TABLE `basketball`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `chess`
+--
+ALTER TABLE `chess`
+  ADD PRIMARY KEY (`Id`);
 
 --
 -- Indexes for table `coach`
@@ -298,9 +464,21 @@ ALTER TABLE `headcoach`
   ADD PRIMARY KEY (`IDNumber`);
 
 --
+-- Indexes for table `karatedo`
+--
+ALTER TABLE `karatedo`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `lawntennis`
 --
 ALTER TABLE `lawntennis`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `mvt`
+--
+ALTER TABLE `mvt`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -316,6 +494,24 @@ ALTER TABLE `swimming`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tabletennis`
+--
+ALTER TABLE `tabletennis`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `taekwando`
+--
+ALTER TABLE `taekwando`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `trackandfield`
+--
+ALTER TABLE `trackandfield`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `wvt`
 --
 ALTER TABLE `wvt`
@@ -326,53 +522,85 @@ ALTER TABLE `wvt`
 --
 
 --
+-- AUTO_INCREMENT for table `badminton`
+--
+ALTER TABLE `badminton`
+  MODIFY `id` int(45) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT for table `basketball`
 --
 ALTER TABLE `basketball`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
+--
+-- AUTO_INCREMENT for table `chess`
+--
+ALTER TABLE `chess`
+  MODIFY `Id` int(45) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `coach`
 --
 ALTER TABLE `coach`
   MODIFY `IDNumber` int(32) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `coachuser`
 --
 ALTER TABLE `coachuser`
   MODIFY `id_coach` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
-
 --
 -- AUTO_INCREMENT for table `football`
 --
 ALTER TABLE `football`
   MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
-
 --
 -- AUTO_INCREMENT for table `futsal`
 --
 ALTER TABLE `futsal`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
 --
 -- AUTO_INCREMENT for table `headcoach`
 --
 ALTER TABLE `headcoach`
   MODIFY `IDNumber` int(11) NOT NULL AUTO_INCREMENT;
-
+--
+-- AUTO_INCREMENT for table `karatedo`
+--
+ALTER TABLE `karatedo`
+  MODIFY `id` int(45) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `lawntennis`
 --
 ALTER TABLE `lawntennis`
   MODIFY `id` int(45) NOT NULL AUTO_INCREMENT;
-
+--
+-- AUTO_INCREMENT for table `mvt`
+--
+ALTER TABLE `mvt`
+  MODIFY `id` int(45) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `swimming`
+--
+ALTER TABLE `swimming`
+  MODIFY `id` int(45) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `tabletennis`
+--
+ALTER TABLE `tabletennis`
+  MODIFY `id` int(45) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `taekwando`
+--
+ALTER TABLE `taekwando`
+  MODIFY `id` int(45) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `trackandfield`
+--
+ALTER TABLE `trackandfield`
+  MODIFY `id` int(45) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `wvt`
 --
 ALTER TABLE `wvt`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-COMMIT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
