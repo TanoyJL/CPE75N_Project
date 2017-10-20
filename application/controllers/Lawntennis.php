@@ -38,7 +38,7 @@
 		}
 
 		function view(){
-				$data = array();
+			$data = array();
 
 			if($query = $this->Lawntennis_model->get_records()) 	{
 					$data['records'] = $query;

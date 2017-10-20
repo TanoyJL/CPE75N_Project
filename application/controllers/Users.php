@@ -58,6 +58,34 @@ class Users extends CI_Controller {
       }  
     }
 
+    public function login_headCoach()
+    {   
+
+          $this->load->helper('form');
+          $this->load->library('form_validation');
+          $this->load->helper('url_helper');
+          
+
+          $this->form_validation->set_rules('username', 'Username', 'required|alpha_numeric_spaces');
+          $this->form_validation->set_rules('password', 'Password', 'required|alpha_numeric_spaces');
+          
+           if ($this->form_validation->run() === FALSE)
+      {
+          $data['title'] = 'Coach Login';
+          $this->load->view('templates/header', $data);
+          $this->load->view('users/coach_login', $data);
+          $this->load->view('templates/footer');
+
+      }
+          else
+      {
+          
+          $username = $this->input->post('username');
+          $password = $this->input->post('password');
+          $this->user_model->checkloginauth($username,$password);
+      }  
+    }
+
     public function logout()
     {
 
@@ -70,7 +98,7 @@ class Users extends CI_Controller {
 
     public function view()
     {
-    
+      
     }
 
      

@@ -71,6 +71,10 @@ class User_model extends CI_Model{
 
 		     		 redirect('lawntennis/view');
 		     	}
+		     	else if($data['sport'] == 'head'){
+
+		     		 redirect('headcoach/view');
+		     	}
 		   }
 		   else
 		   {
@@ -79,5 +83,7 @@ class User_model extends CI_Model{
 		     redirect('users/login_coach');
 		   }
 		}
+
+	
 
 }
