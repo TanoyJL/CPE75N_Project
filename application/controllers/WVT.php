@@ -33,7 +33,7 @@
 				'height' => $this->input->post('height'),
 				'weight' => $this->input->post('weight'),
 					);
-				$this->WVT_model>add_records($data);
+				$this->WVT_model->add_records($data);
 				$this->register();
 		}
 

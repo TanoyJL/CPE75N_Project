@@ -33,7 +33,7 @@ class User_model extends CI_Model{
 		     	}
 		     	if($data['sport'] == 'womensvoleyball'){
 
-		     		 redirect('womensvoleyball/view');
+		     		 redirect('WVT/view');
 		     	}
 		     	if($data['sport'] == 'mensvoleyball'){
 
