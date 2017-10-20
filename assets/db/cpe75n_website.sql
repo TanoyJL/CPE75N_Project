@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 20, 2017 at 12:55 AM
--- Server version: 10.1.25-MariaDB
--- PHP Version: 7.1.7
+-- Generation Time: Oct 20, 2017 at 06:05 PM
+-- Server version: 10.1.28-MariaDB
+-- PHP Version: 7.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -91,7 +91,8 @@ INSERT INTO `coachuser` (`id_coach`, `username`, `sport`, `password`) VALUES
 (13, 'taekwondocoach', 'taekwondo', 'taekwondocoach'),
 (14, 'karatedocoach', 'karatedo', 'karatedocoach'),
 (15, 'swimmingcoach', 'swimming', 'swimmingcoach'),
-(16, 'trackandfieldcoach', 'trackandfield', 'trackandfieldcoach');
+(16, 'trackandfieldcoach', 'trackandfield', 'trackandfieldcoach'),
+(27, 'headCoach', 'head', 'headCoach');
 
 -- --------------------------------------------------------
 
@@ -329,41 +330,49 @@ ALTER TABLE `wvt`
 --
 ALTER TABLE `basketball`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `coach`
 --
 ALTER TABLE `coach`
   MODIFY `IDNumber` int(32) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `coachuser`
 --
 ALTER TABLE `coachuser`
-  MODIFY `id_coach` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id_coach` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+
 --
 -- AUTO_INCREMENT for table `football`
 --
 ALTER TABLE `football`
   MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
 --
 -- AUTO_INCREMENT for table `futsal`
 --
 ALTER TABLE `futsal`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT for table `headcoach`
 --
 ALTER TABLE `headcoach`
   MODIFY `IDNumber` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `lawntennis`
 --
 ALTER TABLE `lawntennis`
   MODIFY `id` int(45) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `wvt`
 --
 ALTER TABLE `wvt`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;COMMIT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
