@@ -14,7 +14,10 @@
 	
 		function add_records($data){
 			
+<<<<<<< HEAD
 			
+=======
+>>>>>>> 67bc3fe83cf67c553aea0cce549dd0b233582c85
 			$this->load->helper('url');
 			
 
@@ -26,6 +29,7 @@
 		        'course_year'=> $this->input->post('course_year'),
 				
 				'age'=> $this->input->post('age'),
+<<<<<<< HEAD
 		        'players_date_of_birth'=> $this->input->post('players_date_of_birth'),
 		        
 		        'contact_phone_number'=> $this->input->post('contact_phone_number'),
@@ -85,11 +89,60 @@
 				'swim_event_breaststroke200'=> $this->input->post('swim_event_breaststroke200'),
 				
 
+=======
+		        'players_date_of_birth'=> $this->input->post('gender'),
+		        
+		        'contact_phone_number'=> $this->input->post('course_year'),
+		        'contact_email'=> $this->input->post('gender'),
+				
+				'address' => $this->input->post(''),
+		        'years_of_playing_experience'=> $this->input->post('gender'),
+				
+				'gender'=> $this->input->post('gender'),
+				'height'=> $this->input->post('gender'),
+				'weight'=> $this->input->post('gender'),
+
+				'playerexperience_nationalteam'=> $this->input->post('gender'),
+				'playerexperience_nationalteam_rank'=> $this->input->post('gender'),
+				
+				'playerexperience_national_PRISAA'=> $this->input->post('gender'),
+				'playerexperience_national_PRISAA_rank'=> $this->input->post('gender'),
+
+				'playerexperience_regional_PRISAA'=> $this->input->post('gender'),
+				'playerexperience_regional_PRISAA_rank'=> $this->input->post('gender'),
+
+				'playerexperience_UNI_games'=> $this->input->post('gender'),
+				'playerexperience_UNI_games_rank'=> $this->input->post('gender'),
+				
+				'playerexperience_PH_national_games'=> $this->input->post('gender'),
+				'playerexperience_PH_national_games_rank'=> $this->input->post('gender'),
+
+				'playerexperience_palarong_pambasa'=> $this->input->post('gender'),
+				'playerexperience_palarong_pambasa_rank'=> $this->input->post('gender'),
+
+				'playerexperience_CVIRAA'=> $this->input->post('gender'),
+				'playerexperience_CVIRAA_rank'=> $this->input->post('gender'),
+
+				'playerexperience_highschool_only'=> $this->input->post('gender'),
+				'playerexperience_highschool_only_rank'=> $this->input->post('gender'),
+
+				'playerexperience_others'=> $this->input->post('gender'),
+				'playerexperience_others_rank'=> $this->input->post('gender'),
+
+				'hitting_hand'=> $this->input->post('gender'),
+				'preferred_category_single'=> $this->input->post('gender'),
+				'preferred_category_doubles'=> $this->input->post('gender'),
+				'preferred_category_mixed_doubles'=> $this->input->post('gender'),
+>>>>>>> 67bc3fe83cf67c553aea0cce549dd0b233582c85
 
 		    );
 
 
+<<<<<<< HEAD
 			$this->db->insert('swimming',$data);
+=======
+			$this->db->insert('badminton',$data);
+>>>>>>> 67bc3fe83cf67c553aea0cce549dd0b233582c85
 			$id = $this->db->insert_id();
 			redirect('');
 	 	}

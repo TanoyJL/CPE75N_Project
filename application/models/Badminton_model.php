@@ -61,9 +61,15 @@
 				'playerexperience_others_rank'=> $this->input->post('playerexperience_others_rank'),
 
 				'hitting_hand'=> $this->input->post('hitting_hand'),
+<<<<<<< HEAD
 				'preferred_category_singles'=> $this->input->post('preferred_category_singlesy'),
 				'preferred_category_doubles'=> $this->input->post('preferred_category_doubles'),
 				'preferred_category_mixed_doubles'=> $this->input->post('preferred_category_mixed_doubles'),
+=======
+				'preferred_category'=> $this->input->post('preferred_category'),
+
+
+>>>>>>> 67bc3fe83cf67c553aea0cce549dd0b233582c85
 		    );
 
 
