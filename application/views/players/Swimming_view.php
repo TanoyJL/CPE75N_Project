@@ -76,14 +76,16 @@
 		    <td><?php echo $rows->breast_stroke3; ?></td>
 		    <td><?php echo $rows->individual_medley1; ?></td>
 		    <td><?php echo $rows->individual_medley2; ?></td>
+		     <td><a  " href="<?php echo site_url('swimming/delete_row/'.$rows->id_num); ?>"> Delete Player</a></td>
 
 
 		  </tr>
+
 		  <?php endforeach; ?>
 		  			<?php else: ?>
 			<center><h2 style="color:red;">Sorry, No Records</h2></center>
 			<?php endif; ?>
 	</table>
 
-	                        
+
 

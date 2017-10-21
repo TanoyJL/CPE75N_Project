@@ -69,7 +69,7 @@
           </div>
       </div> 
         <div class="form-group row">
-          <label class="control-label col-sm-2" >Weight(in feet)</label>
+          <label class="control-label col-sm-2" >Weight(in kg)</label>
           <div class="col-sm-10">          
             <input type="number" class="form-control" placeholder="Enter weight" name="weight" required>
           </div>

@@ -66,4 +66,10 @@
 			$this->load->view("templates/footer");
 			
 		}
+
+	public function delete_row($id_num) {   
+      $this->load->model("swimming_model");
+      $this->swimming_model->delete_row($id_num);
+      redirect($_SERVER['HTTP_REFERER']);  
+      }
 	}

@@ -152,9 +152,9 @@
 		 	$this->db->update('swimming', $data);
 		}
 
-		 function delete_row(){
-			$this->db->where('id', $this->url->segment(3));
-		 	$this->db->delete('swimming');
+		 function delete_row($id_num){
+			$this->db->where('id_num', $id_num);
+   			$this->db->delete('swimming'); 
 		}
 
 	}
