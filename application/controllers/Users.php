@@ -88,7 +88,9 @@ class Users extends CI_Controller {
 
     public function logout()
     {
-
+        $this->session->unset_userdata('user');
+        $this->session->sess_destroy();
+        redirect('', 'refresh');
     }
         
     public function delete()

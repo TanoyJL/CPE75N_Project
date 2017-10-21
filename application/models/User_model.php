@@ -16,7 +16,7 @@ class User_model extends CI_Model{
 		   $this ->db-> limit(1);
 		   $query = $this ->db-> get('coachuser');
 		   $data = $query->row_array();
-		 
+		   $this->session->set_userdata('user', $username);
 		   if($query -> num_rows() == 1)
 		   {
 		     	if($data['sport'] == 'futsal'){
@@ -79,7 +79,8 @@ class User_model extends CI_Model{
 		   else
 		   {
 		   
-
+			$this->session->unset_userdata('user');
+			$this->session->sess_destroy();
 		     redirect('users/login_coach');
 		   }
 		}
