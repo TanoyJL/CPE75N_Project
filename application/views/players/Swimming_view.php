@@ -25,6 +25,24 @@
 		    <th>Years of Experience</th>
 		    <th>Height(in feet)</th>
 		    <th>Weight(in feet)</th>
+		     <th>Back Stroke(50 meter)</th>
+		     <th>Back Stroke(100 meter)</th>
+		     <th>Back Stroke(200 meter)</th>
+		     <th>Free Style(50 meter)</th>
+		     <th>Free Style(100 meter)</th>
+		     <th>Free Style(200 meter)</th>
+		     <th>Free Style(400 meter)</th>
+		     <th>Free Style(800 meter)</th>
+		     <th>Free Style(1500 meter)</th>
+		     <th>Butterfly(50 meter)</th>
+		     <th>Butterfly(100 meter)</th>
+		     <th>Butterfly(200 meter)</th>
+		     <th>Breast Stroke(50 meter)</th>
+		     <th>Breast Stroke(100 meter)</th>
+		     <th>Breast Stroke(200 meter)</th>
+		     <th>Individual Medley(200 meter)</th>
+		     <th>Individual Medley(400 meter)</th>
+
 		  </tr>
 		  	<?php if(isset($records)) : foreach ($records as $rows) :?>
 			<!-- PUT RECORDS HERE FROM DB-->
@@ -41,10 +59,31 @@
 		    <td><?php echo $rows->years_experience; ?></td>
 		    <td><?php echo $rows->height; ?></td>
 		    <td><?php echo $rows->weight; ?></td>
+		    <td><?php echo $rows->back_stroke1; ?></td>
+		    <td><?php echo $rows->back_stroke2; ?></td>
+		    <td><?php echo $rows->back_stroke3; ?></td>
+		    <td><?php echo $rows->free_style1; ?></td>
+		    <td><?php echo $rows->free_style2; ?></td>
+		    <td><?php echo $rows->free_style3; ?></td>
+		    <td><?php echo $rows->free_style4; ?></td>
+		    <td><?php echo $rows->free_style5; ?></td>
+		    <td><?php echo $rows->free_style6; ?></td>
+		    <td><?php echo $rows->butterfly1; ?></td>
+		    <td><?php echo $rows->butterfly2; ?></td>
+		    <td><?php echo $rows->butterfly3; ?></td>
+		    <td><?php echo $rows->breast_stroke1; ?></td>
+		    <td><?php echo $rows->breast_stroke2; ?></td>
+		    <td><?php echo $rows->breast_stroke3; ?></td>
+		    <td><?php echo $rows->individual_medley1; ?></td>
+		    <td><?php echo $rows->individual_medley2; ?></td>
+
+
 		  </tr>
 		  <?php endforeach; ?>
 		  			<?php else: ?>
 			<center><h2 style="color:red;">Sorry, No Records</h2></center>
 			<?php endif; ?>
 	</table>
+
+	                        
 

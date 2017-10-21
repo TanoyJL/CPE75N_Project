@@ -26,7 +26,12 @@
 		    <th>Height(in feet)</th>
 		    <th>Weight(in feet)</th>
 		    <th>Shooting Hand</th>
-		    <th>Position</th>
+		    <th>Point Guard</th>
+		    <th>Shooting Guard</th>
+		    <th>Small Forward</th>
+		    <th>PowerForward</th>
+		    <th>Center</th>
+
 		  </tr>
 		  	<?php if(isset($records)) : foreach ($records as $rows) :?>
 			<!-- PUT RECORDS HERE FROM DB-->
@@ -44,7 +49,11 @@
 		    <td><?php echo $rows->height; ?></td>
 		    <td><?php echo $rows->weight; ?></td>
 		    <td><?php echo $rows->shooting_hand; ?></td>
-		    <td><?php echo $rows->position; ?></td>
+		    <td><?php echo $rows->position1; ?></td>
+		    <td><?php echo $rows->position2; ?></td>
+		    <td><?php echo $rows->position3; ?></td>
+		    <td><?php echo $rows->position4; ?></td>
+		    <td><?php echo $rows->position5; ?></td>
 		  </tr>
 		  <?php endforeach; ?>
 		  			<?php else: ?>
