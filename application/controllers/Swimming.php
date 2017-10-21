@@ -12,6 +12,7 @@
 		$data['sport'] = 'Swimming/create';	
 		$this->load->view("templates/header",$data);
 		$this->load->view("players/try-out",$data);
+		$this->load->view("players/swimming_form",$data);
 		$this->load->view("templates/footer");
 		}
 
@@ -30,6 +31,23 @@
 				'gender' => $this->input->post('gender'),
 				'height' => $this->input->post('height'),
 				'weight' => $this->input->post('weight'),
+				'back_stroke1' => $this->input->post('back_stroke1'),
+				'back_stroke2' => $this->input->post('back_stroke2'),
+				'back_stroke3' => $this->input->post('back_stroke3'),
+				'free_style1' => $this->input->post('free_style1'),
+				'free_style2' => $this->input->post('free_style1'),
+				'free_style3' => $this->input->post('free_style1'),
+				'free_style4' => $this->input->post('free_style1'),
+				'free_style5' => $this->input->post('free_style1'),
+				'free_style6' => $this->input->post('free_style1'),
+				'butterfly1' => $this->input->post('butterfly1'),
+				'butterfly2' => $this->input->post('butterfly2'),
+				'butterfly3' => $this->input->post('butterfly3'),
+				'breast_stroke1' => $this->input->post('breast_stroke1'),
+				'breast_stroke2' => $this->input->post('breast_stroke2'),
+				'breast_stroke3' => $this->input->post('breast_stroke3'),
+				'individual_medley1' => $this->input->post('individual_medley1'),
+				'individual_medley2' => $this->input->post('individual_medley2'),
 					);
 				$this->Swimming_model->add_records($data);
 				$this->register();

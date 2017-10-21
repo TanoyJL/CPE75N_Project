@@ -19,7 +19,7 @@
 		function create(){
 			$data = array (
 				'shooting_hand' => $this->input->post('shooting_hand'),
-				'position' => $this->input->post('position'),
+			
 				'first_name' => $this->input->post('first_name'),
 				'last_name' => $this->input->post('last_name'),
 				'id_num' => $this->input->post('id_num'),
@@ -31,9 +31,15 @@
 				'address' => $this->input->post('address'),
 				'years_experience' => $this->input->post('years_experience'),
 				'height' => $this->input->post('height'),
-				'weight' => $this->input->post('weight')
+				'weight' => $this->input->post('weight'),
+				'position1' => $this->input->post('position1'),
+				'position2' => $this->input->post('position2'),
+				'position3' => $this->input->post('position3'),
+				'position4' => $this->input->post('position4'),
+				'position5' => $this->input->post('position5'),
+				
 					);
-				$this->Basketball_model>add_records($data);
+				$this->Basketball_model->add_records($data);
 				$this->register();
 		}
 
