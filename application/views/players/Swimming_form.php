@@ -1,34 +1,92 @@
+	<header>
+          <h3>Swimming Event</h3>
+        </header>
+         <center>
+        <div class="row uniform 100%">
+       
+            <div class="2u 12u(narrower)">
+            <h4>Back Stroke</h4>
 
+                      <br>
+                         <input id="back_stroke_50_meter"  type="checkbox" name="back_stroke_50_meter" value="yes"> 
+						 <label for="back_stroke_50_meter">50 meter</label><br><br>
+						 <input id="back_stroke_100_meter"  type="checkbox" name="back_stroke_100_meter" value="yes"> 
+						 <label for="back_stroke_100_meter">100 meter</label><br><br>
+						 <input id="back_stroke_200_meter" type="checkbox" name="back_stroke_200_meter" value="yes">
+						 <label for="back_stroke_200_meter">200 meter</label><br><br>
+						 
+
+          			  <br>
+             </div>
+			<div class="2u 12u(narrower)">
+            <h4>Free Style</h4>
+
+                      <br>
+						 <input id="free_style_50_meter"  type="checkbox" name="free_style_50_meter" value="yes"> 
+						 <label for="free_style_50_meter">50 meter</label><br><br>
+						 <input id="free_style_100_meter"  type="checkbox" name="free_style_100_meter" value="yes"> 
+						 <label for="free_style_100_meter">100 meter</label><br><br>
+						 <input id="free_style_200_meter" type="checkbox" name="free_style_200_meter" value="yes">
+						 <label for="free_style_200_meter">200 meter</label><br><br>
+						 <input id="free_style_400_meter"  type="checkbox" name="free_style_400_meter" value="yes"> 
+						 <label for="free_style_400_meter">400 meter</label><br><br>
+						 <input id="free_style_800_meter"  type="checkbox" name="free_style_800_meter" value="yes"> 
+						 <label for="free_style_800_meter">800 meter</label><br><br>
+						 <input id="free_style_1500_meter" type="checkbox" name="free_style_1500_meter" value="yes">
+						 <label for="free_style_1500_meter">1500 meter</label><br><br>
+          			  <br>
+             </div>
+             <div class="4u 12u(narrower)">
+            <h4>Butterfly</h4>
+
+                      <br>
+						 <input id="butterfly_50_meter"  type="checkbox" name="butterfly_50_meter" value="yes"> 
+						 <label for="butterfly_50_meter">50 meter</label><br><br>
+						 <input id="butterfly_100_meter"  type="checkbox" name="butterfly_100_meter" value="yes"> 
+						 <label for="butterfly_100_meter">100 meter</label><br><br>
+						 <input id="butterfly_200_meter" type="checkbox" name="butterfly_200_meter" value="yes">
+						 <label for="butterfly_200_meter">200 meter</label><br><br>
+          			  <br>
+             </div>
+			 <div class="2u 12u(narrower)">
+            <h4>Breast Stroke</h4>
+
+                      <br>
+                         <input id="breast_stroke_50_meter"  type="checkbox" name="breast_stroke_50_meter" value="yes"> 
+						 <label for="breast_stroke_50_meter">50 meter</label><br><br>
+						 <input id="breast_stroke_100_meter"  type="checkbox" name="breast_stroke_100_meter" value="yes"> 
+						 <label for="breast_stroke_100_meter">100 meter</label><br><br>
+						 <input id="breast_stroke_200_meter" type="checkbox" name="breast_stroke_200_meter" value="yes">
+						 <label for="breast_stroke_200_meter">200 meter</label><br><br>
+						 
+
+          			  <br>
+             </div>
+			<div class="2u 12u(narrower)">
+            <h4>Individual Medley</h4>
+
+                      <br>
+						 <input id="individual_medley_200_meter"  type="checkbox" name="individual_medley_200_meter" value="yes"> 
+						 <label for="individual_medley_200_meter">200 meter</label><br><br>
+						 <input id="individual_medley_400_meter"  type="checkbox" name="individual_medley_400_meter" value="yes"> 
+						 <label for="individual_medley_400_meter">400 meter</label><br><br>
+						 
+             </div>
+            
+			</div>
+			
+		</center>
 		
-			Swimming Event: <br>
-			Back Stroke :<br />
-			<input type="checkbox" name="back_stroke1" value="yes" checked> 50 meter
-			 <input type="checkbox" name="back_stroke2" value="yes"> 100 meter
-			 <input type="checkbox" name="back_stroke3" value="yes"> 200 meter
-			 <br>
-			Free Style : <br>
-			<input type="checkbox" name="free_style1" value="yes" checked> 50 meter
-			<input type="checkbox" name="free_style2" value="yes"> 100 meter
-			<input type="checkbox" name="free_style3" value="yes"> 200 meter
-			<input type="checkbox" name="free_style4" value="yes"> 400 meter
-			<input type="checkbox" name="free_style5" value="yes"> 800 meter
-			<input type="checkbox" name="free_style6" value="yes"> 1500 meter
-			<br>
-			Butterfly : <br>
-			<input type="checkbox" name="butterfly1" value="yes" checked> 50 meter
-			<input type="checkbox" name="butterfly2" value="yes"> 100 meter
-			<input type="checkbox" name="butterfly3" value="yes"> 200 meter
-			<br>
-			Breast Stroke : <br>
-			<input type="checkbox" name="breast_stroke1" value="yes" checked> 50 meter
-			<input type="checkbox" name="breast_stroke2" value="yes"> 100 meter
-			<input type="checkbox" name="breast_stroke3" value="yes"> 200 meter
-			<br>
-			Individual Medley: <br>
-			<input type="checkbox" name="individual_medley1" value="yes" checked> 200 meter
-			<input type="checkbox" name="individual_medley2" value="yes"> 400 meter
-		<br />
-		<input type="submit" value="Submit">
+			
+			
+		 <div class="row uniform">
+              <div class="12u (mobilep)">
+                <ul class="actions align-center">
+                  <li><input type="Submit" value="Submit"/></li>
+                </ul>
+              </div>
+              </div>
+		    </section>
 		<?php echo form_close(); ?>
 	<hr />
 

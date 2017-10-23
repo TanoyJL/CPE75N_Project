@@ -8,32 +8,17 @@
 		}
 
 		function register() {
-		$data['title'] = 'Womens Volleyball Try Out Form';
+		$data['title'] = 'WVT Try Out Form';
 		$data['sport'] = 'WVT/create';	
 		$this->load->view("templates/header",$data);
-		$this->load->view("players/try-out",$data);
-		$this->load->view("players/WVT_form");
+		$this->load->view("players/try-out");
+		$this->load->view("players/WVT_form",$data);
 		$this->load->view("templates/footer");
 		}
 
 		function create(){
-			$data = array (
-				'hittinghand' => $this->input->post('hittinghand'),
-				'position' => $this->input->post('position'),
-				'first_name' => $this->input->post('first_name'),
-				'last_name' => $this->input->post('last_name'),
-				'id_num' => $this->input->post('id_num'),
-				'course_year' => $this->input->post('course_year'),
-				'gender' => $this->input->post('gender'),
-				'age' => $this->input->post('age'),
-				'birthdate' => $this->input->post('birthdate'),
-				'email' => $this->input->post('email'),
-				'address' => $this->input->post('address'),
-				'years_experience' => $this->input->post('years_experience'),
-				'height' => $this->input->post('height'),
-				'weight' => $this->input->post('weight'),
-					);
-				$this->WVT_model->add_records($data);
+			
+				$this->WVT_model->add_records();
 				$this->register();
 		}
 
@@ -44,10 +29,65 @@
 					$data['records'] = $query;
 			}
 
-			$data['title'] = 'Womens Volleyball Players Record';	
-			$this->load->view("templates/header",$data);
+			$data['sport'] = 'WVT Coach';	
+			$data['applicants'] = 'New Applicants'	;
+			$data['link'] = 'Approve';
+			$this->load->view("templates/header3",$data);
 			$this->load->view("players/WVT_view", $data);
 			$this->load->view("templates/footer");
 			
 		}
+
+		function view_details($id){
+				$data = array();
+
+			if($query = $this->WVT_model->get_record($id)) 	{
+					$data['records'] = $query;
+			}
+
+			$data['sport'] = 'WVT Coach';	
+			$data['applicants'] = 'New Applicants'	;
+			$this->load->view("templates/header3",$data);
+			$this->load->view("players/WVT_viewdetails", $data);
+			$this->load->view("templates/footer");
+			
+		}
+
+		function view_approved(){
+				$data = array();
+				$approval ='approved';
+			if($query = $this->WVT_model->get_records($approval)) 	{
+					$data['records'] = $query;
+			}
+
+			$data['sport'] = 'WVT Coach';
+			$data['applicants'] = 'Approved Applicants'	;
+			$data['link'] = 'Deny';
+			$this->load->view("templates/header3",$data);
+			$this->load->view("players/WVT_view", $data);
+			$this->load->view("templates/footer");
+			
+		}
+
+		function approve($id){
+			$approval = 'approved';
+				$this->db->set('approval', $approval);
+          		$this->db->where('id_num', $id);
+          		$this->db->update('WVT'); 
+          		$this->view($id);
+		}
+
+		function deny($id){
+			$approval = NULL;
+				$this->db->set('approval', $approval);
+          		$this->db->where('id_num', $id);
+          		$this->db->update('WVT'); 
+          		$this->view_approved($id);
+		}
+
+	public function delete_row($id_num) {   
+      $this->load->model("WVT_model");
+      $this->WVT_model->delete_row($id_num);
+      redirect($_SERVER['HTTP_REFERER']);  
+      }
 	}

@@ -11,6 +11,8 @@ class Sports extends CI_Controller {
 
     public function index()
     {   
+
+        $this->load->helper('url');
         $data['title'] = 'Sports';
         $this->load->view('templates/header', $data);
         $this->load->view('sports/view', $data);

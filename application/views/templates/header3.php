@@ -24,16 +24,29 @@
 
  
     <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
-  </head>
-        <body>
-    <header id="header" class="skel-layers-fixed">
-        <h1>USC Sports Database</h1> 
-        <nav id="nav">
-          <ul>
-            <li><a href="<?php echo base_url(). '/index.php'?>" class="button">Home</a></li>
-          </ul>
-        </nav>
-      </header>
+ 
+ <body>
+
+		<header id="header" class="skel-layers-fixed">
+				<h1>Welcome, <?php echo $sport ?></h1>
+				<nav id="nav">
+					<ul>
+							 <?php
+                if($this->session->userdata('user') != NULL)
+                {
+               ?>
+                <li><a href="<?php echo base_url(). '\index.php\users\logout'?>" class="special button">Log-out</a></li>
+               <?php
+                }else 
+                {
+
+                }
+               ?>
+							
+					</ul>
+				</nav>
+			</header>
+
        
                 
               

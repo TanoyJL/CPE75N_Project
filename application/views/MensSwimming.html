@@ -1,24 +1,4 @@
-<!DOCTYPE HTML>
 
-<html>
-	<head>
-		<title>USC - SPORTS</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<script src="js/jquery.min.js"></script>
-		<script src="js/jquery.dropotron.min.js"></script>
-		<script src="js/jquery.scrollgress.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/skel-layers.min.js"></script>
-		<script src="js/init.js"></script>
-		<noscript>
-			<link rel="stylesheet" href="css/skel.css" />
-			<link rel="stylesheet" href="css/style.css" />
-			<link rel="stylesheet" href="css/style-wide.css" />
-		</noscript>
-		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
-	</head>
 	<body>
 
 		<!-- Header -->
@@ -40,45 +20,38 @@
 				<form action="#">
 					 		 <div class="row uniform 50%">
 										<div class="4u 12u(narrower)">
-										<h2>FreeStyle</h2>	
-											<input type="checkbox" id="a" name="a">
-											<label for="a">50 meter</label><br>
-											<input type="checkbox" id="b" name="b">
-											<label for="b">100 meter</label><br>
-											<input type="checkbox" id="c" name="c">
-											<label for="c">200 meter</label><br>
-											<input type="checkbox" id="d" name="d">
-											<label for="d">400meter</label><br>
-											<input type="checkbox" id="e" name="e">
-											<label for="e">1500 meter</label><br>
-									</div>
-					
-							
-					 		 
-					 		 	<div class="4u 12u(narrower)">
-					 		 	<h2>Butterfly</h2>
-											<input type="checkbox" id="f" name="f">
-											<label for="f">50 meter</label><br>
-											<input type="checkbox" id="g" name="g">
-											<label for="g">100 meter</label><br>
-											<input type="checkbox" id="h" name="h">
-											<label for="h">200 meter</label><br>
-									</div>
+										Swimming Event: <br>
+			Back Stroke :<br />
+			<input type="checkbox" name="back_stroke1" value="yes" checked> 50 meter
+			 <input type="checkbox" name="back_stroke2" value="yes"> 100 meter
+			 <input type="checkbox" name="back_stroke3" value="yes"> 200 meter
+			 <br>
+			Free Style : <br>
+			<input type="checkbox" name="free_style1" value="yes" checked> 50 meter
+			<input type="checkbox" name="free_style2" value="yes"> 100 meter
+			<input type="checkbox" name="free_style3" value="yes"> 200 meter
+			<input type="checkbox" name="free_style4" value="yes"> 400 meter
+			<input type="checkbox" name="free_style5" value="yes"> 800 meter
+			<input type="checkbox" name="free_style6" value="yes"> 1500 meter
+			<br>
+			Butterfly : <br>
+			<input type="checkbox" name="butterfly1" value="yes" checked> 50 meter
+			<input type="checkbox" name="butterfly2" value="yes"> 100 meter
+			<input type="checkbox" name="butterfly3" value="yes"> 200 meter
+			<br>
+			Breast Stroke : <br>
+			<input type="checkbox" name="breast_stroke1" value="yes" checked> 50 meter
+			<input type="checkbox" name="breast_stroke2" value="yes"> 100 meter
+			<input type="checkbox" name="breast_stroke3" value="yes"> 200 meter
+			<br>
+			Individual Medley: <br>
+			<input type="checkbox" name="individual_medley1" value="yes" checked> 200 meter
+			<input type="checkbox" name="individual_medley2" value="yes"> 400 meter
+		<br />
+		<input type="submit" value="Submit">
+		<?php echo form_close(); ?>
+	<hr />
 
-							
-										<div class="4u 12u(narrower)">
-										<h2>Breast Stroke</h2>	
-											<input type="checkbox" id="i" name="i">
-											<label for="i">50 meter</label><br>
-											<input type="checkbox" id="j" name="j">
-											<label for="j">100 meter</label><br>
-											<input type="checkbox" id="k" name="k">
-											<label for="k">200 meter</label><br>
-											<input type="checkbox" id="l" name="l">
-											<label for="l">200 meter Individual Medley</label><br>
-											<input type="checkbox" id="m" name="m">
-											<label for="m">400 meter Individual Medley</label><br>
-									</div>
 							<div class="12u (mobilep)">
 							<ul class="actions align-center">
 									<input type="checkbox" id="human" name="human">
@@ -94,15 +67,3 @@
 						</div>
 				</form>
 			</section>
-
-		<!-- Footer -->
-			<footer id="footer">
-					<ul>
-						<ul>&copy; University of San Carlos: Sports Club Management System</ul>
-						<ul>All rights reserved.</ul>
-						<ul></li>
-					</ul>
-			</footer>
-
-	</body>
-</html>

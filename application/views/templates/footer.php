@@ -1,6 +1,12 @@
 <?php $name = $this->session->userdata('user');
-echo $name;
 ?>
-<em>&copy; 2017</em>
-        </body>
+	<footer id="footer">
+					<ul>
+						<ul>&copy; University of San Carlos: Sports Club Management System</ul>
+						<ul>All rights reserved.</ul>
+						<ul></li>
+					</ul>
+			</footer>
+
+	</body>
 </html>
