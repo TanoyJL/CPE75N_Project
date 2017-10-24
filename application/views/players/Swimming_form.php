@@ -1,5 +1,5 @@
 	<header>
-          <h3>Swimming Event</h3>
+          <h3>Swimming Event(Check All That Apply)</h3>
         </header>
          <center>
         <div class="row uniform 100%">

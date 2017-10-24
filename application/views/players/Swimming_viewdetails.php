@@ -46,6 +46,7 @@
 												<th>Palarong Pambansa</th>
 												<th>CVIRAA</th>
 												<th>High School Only</th>
+												<th>Others</th>
 
 
 											</tr>
@@ -61,6 +62,7 @@
 												<td><?php echo $rows->playerexperience_palarong_pambansa; ?></td>
 												<td><?php echo $rows->playerexperience_CVIRAA; ?></td>
 												<td><?php echo $rows->playerexperience_highschool_only; ?></td>
+												<td><?php echo $rows->playerexperience_others; ?></td>
 											
 												
 												
@@ -73,7 +75,8 @@
 												<td><?php echo $rows->playerexperience_PH_national_games_rank; ?></td>
 												<td><?php echo $rows->playerexperience_palarong_pambansa_rank; ?></td>
 												<td><?php echo $rows->playerexperience_CVIRAA_rank; ?></td>
-												<td><?php echo $rows->playerexperience_highschool_only_rank; ?></td>
+												<td><?php echo $rows->playerexperience_highschool_only; ?></td>
+												<td><?php echo $rows->playerexperience_others_rank; ?></td>
 											
 												
 												
@@ -164,12 +167,50 @@
 											</tr>
 										</tfoot>
 									</table>
+									<table class="alt">
+										<thead>
+											<tr>
+												<center><h3>Comments/Notes</h3></center>
+												
+										
+											</tr>
+										</thead>
+										<tbody>
+											
+											<tr>
+												
+												<td><?php echo $rows->comment?></td>
+												
+											
+											
+												
+												
+											</tr>
+									
+										
+										</tbody>
+										
+										<tfoot>
+											<tr>
+												<td colspan="2"></td>
+											</tr>
+										</tfoot>
+									</table>
+
 										<?php endforeach; ?>
 											<?php else: ?>
 										<center><h2 style="color:red;">Sorry, No Records</h2></center>
 									<?php endif; ?>
+
+
 								</div>
-								<center><a  class="special button" href="<?php echo site_url('swimming/.delete_row/'.$rows->id_num); ?>">Delete Applicant</a></center>
+									<?php echo form_open('swimming/add_comment/'.$rows->id_num); ?>
+									<textarea  placeholder="leave comment/note here." id="comment" class="form-control" rows="5" name="comment"> </textarea>
+									
+									 <br><button class="special button" type="submit" name="submit" value="Create contact " class="btn btn-info">Update Comment</button>
+									 <?php echo form_close(); ?>
+								<br><br><br>
+								<center><a  class="special button" href="<?php echo site_url('swimming/delete_row/'.$rows->id_num); ?>">Delete Applicant</a></center>
 							</section>
 
 					</div>

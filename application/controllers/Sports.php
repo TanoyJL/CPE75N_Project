@@ -19,10 +19,7 @@ class Sports extends CI_Controller {
         $this->load->view('templates/footer');
     }
         
-    public function print()
-    {
-        //list of approved players per sport
-    }
+   
 
         
 }

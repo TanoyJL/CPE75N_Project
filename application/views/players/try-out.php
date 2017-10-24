@@ -67,7 +67,7 @@
             <br>
             <div class="row uniform 50%">
             <div class="6u 12u(narrower)">
-            <h3>Playing Experience</h3>
+            <h3>Playing Experience (Check All That Apply)</h3>
 
                       <br><input value="yes" type="checkbox" id="NationalTeam" name="playerexperience_nationalteam">
                       <label for="NationalTeam">National Team</label><br><br>

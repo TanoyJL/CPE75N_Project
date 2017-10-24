@@ -51,7 +51,6 @@
 				'playerexperience_highschool_only_rank'=> $this->input->post('playerexperience_highschool_only_rank'),
 				'playerexperience_others'=> $this->input->post('playerexperience_others'),
 				'playerexperience_others_rank'=> $this->input->post('playerexperience_others_rank'),
-				
 				'back_stroke_50_meter'=> $this->input->post('back_stroke_50_meter'),
 				'back_stroke_100_meter'=> $this->input->post('back_stroke_100_meter'),
 				'back_stroke_200_meter'=> $this->input->post('back_stroke_200_meter'),

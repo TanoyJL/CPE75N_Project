@@ -19,7 +19,7 @@
 		function create(){
 			
 				$this->Swimming_model->add_records();
-				$this->register();
+				redirect("pages/view");
 		}
 
 		function view(){
@@ -85,9 +85,20 @@
           		$this->view_approved($id);
 		}
 
+		function add_comment($id){
+			$data = array(
+            'comment' => $this->input->post('comment'),
+       				 );
+			$data['id']=$id;
+				$this->db->set('comment', $data['comment']);
+          		$this->db->where('id_num', $data['id']);
+          		$this->db->update('swimming'); 
+          		$this->view_details($id);
+		}
+
 	public function delete_row($id_num) {   
       $this->load->model("swimming_model");
       $this->swimming_model->delete_row($id_num);
-      redirect($_SERVER['HTTP_REFERER']);  
+      redirect("swimming/view");  
       }
 	}
