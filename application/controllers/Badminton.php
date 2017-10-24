@@ -90,4 +90,23 @@
       $this->badminton_model->delete_row($id_num);
       redirect($_SERVER['HTTP_REFERER']);  
       }
+
+
+     
+		function add_comment($id){
+			$data = array(
+            'comment' => $this->input->post('comment'),
+       				 );
+			$data['id']=$id;
+				$this->db->set('comment', $data['comment']);
+          		$this->db->where('id_num', $data['id']);
+          		$this->db->update('badminton'); 
+          		$this->view_details($id);
+		}
+
+	public function delete_row($id_num) {   
+      $this->load->model("badminton_model");
+      $this->badminton_model->delete_row($id_num);
+      redirect("badminton/view");  
+      }
 	}

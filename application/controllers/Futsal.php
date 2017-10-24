@@ -85,9 +85,21 @@
           		$this->view_approved($id);
 		}
 
+	
+		function add_comment($id){
+			$data = array(
+            'comment' => $this->input->post('comment'),
+       				 );
+			$data['id']=$id;
+				$this->db->set('comment', $data['comment']);
+          		$this->db->where('id_num', $data['id']);
+          		$this->db->update('futsal'); 
+          		$this->view_details($id);
+		}
+
 	public function delete_row($id_num) {   
       $this->load->model("futsal_model");
       $this->futsal_model->delete_row($id_num);
-      redirect($_SERVER['HTTP_REFERER']);  
+      redirect("futsal/view");  
       }
 	}
