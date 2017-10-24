@@ -39,7 +39,7 @@
                <?php
                 }else 
                 {
-
+                  redirect('pages/view');
                 }
                ?>
 							

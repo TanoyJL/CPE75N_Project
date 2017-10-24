@@ -75,7 +75,7 @@
 												<td><?php echo $rows->playerexperience_PH_national_games_rank; ?></td>
 												<td><?php echo $rows->playerexperience_palarong_pambansa_rank; ?></td>
 												<td><?php echo $rows->playerexperience_CVIRAA_rank; ?></td>
-												<td><?php echo $rows->playerexperience_highschool_only; ?></td>
+												<td><?php echo $rows->playerexperience_highschool_only_rank; ?></td>
 												<td><?php echo $rows->playerexperience_others_rank; ?></td>
 											
 												
@@ -114,10 +114,7 @@
 												<td></td>
 												<td></td>
 												<td></td>
-											
-											
-												
-												
+
 											</tr>
 											<tr>
 												<td>Free Style</td>
@@ -177,16 +174,6 @@
 										</thead>
 										<tbody>
 											
-											<tr>
-												
-												<td><?php echo $rows->comment?></td>
-												
-											
-											
-												
-												
-											</tr>
-									
 										
 										</tbody>
 										
@@ -196,19 +183,16 @@
 											</tr>
 										</tfoot>
 									</table>
-
-										<?php endforeach; ?>
-											<?php else: ?>
-										<center><h2 style="color:red;">Sorry, No Records</h2></center>
-									<?php endif; ?>
-
-
 								</div>
 									<?php echo form_open('swimming/add_comment/'.$rows->id_num); ?>
-									<textarea  placeholder="leave comment/note here." id="comment" class="form-control" rows="5" name="comment"> </textarea>
+									<textarea  placeholder="Leave comment or note here......" id="comment" class="form-control" rows="5" name="comment"><?php if ($rows->comment != NULL) echo $rows->comment?></textarea>
 									
 									 <br><button class="special button" type="submit" name="submit" value="Create contact " class="btn btn-info">Update Comment</button>
 									 <?php echo form_close(); ?>
+									 <?php endforeach; ?>
+											<?php else: ?>
+										<center><h2 style="color:red;">Sorry, No Records</h2></center>
+									<?php endif; ?>
 								<br><br><br>
 								<center><a  class="special button" href="<?php echo site_url('swimming/delete_row/'.$rows->id_num); ?>">Delete Applicant</a></center>
 							</section>
