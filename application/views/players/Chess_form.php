@@ -1,6 +1,4 @@
-	
-		
-			
+
 			
 		 <div class="row uniform">
               <div class="12u (mobilep)">
