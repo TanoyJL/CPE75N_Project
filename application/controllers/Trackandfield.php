@@ -19,7 +19,7 @@
 		function create(){
 			
 				$this->trackandfield_model->add_records();
-				$this->register();
+				redirect("pages/view");
 		}
 
 		function view(){
